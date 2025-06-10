@@ -1,0 +1,13 @@
+*{
+    text-align: center;
+    background-color: aqua;
+}
+
+
+h1 {
+    color: crimson;
+    animation: truc alternate infinite;
+}
+@keyframes truc {
+
+}

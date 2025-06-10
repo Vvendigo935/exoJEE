@@ -1,22 +1,22 @@
-package org.example.exo1jee;
+package org.example.exo2jee;
 
 import java.io.*;
 
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "txtBrut", value = "/txtBrut")
+@WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "LE TEXTE BRUT POUR CRICRI";
+        message = "Hello World!";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
 
-        // txtBrut
+        // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");

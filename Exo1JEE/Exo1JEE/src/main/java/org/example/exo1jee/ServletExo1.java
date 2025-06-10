@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "exo1serv", value = "/exo1serv")
-public class Exo1 extends HttpServlet {
+public class ServletExo1 extends HttpServlet {
 
     private String texte;
 
@@ -35,6 +35,7 @@ public class Exo1 extends HttpServlet {
         out.println("<h1>"+texte+"</h1>");
         out.println("<h2>TITRE LAAAAA</h2>");
         out.println("<h3>ON FAIT DU HTML OU BIEN ??? TAVU</h3>");
+        out.println("<img src="+"https://i.kym-cdn.com/entries/icons/facebook/000/039/305/maxresdefault.jpg"+">");
         out.println("</body></html>");
 
 

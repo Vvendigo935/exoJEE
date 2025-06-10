@@ -8,8 +8,15 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="txtBrut">texte brut ici</a>
-<a href="exo1serv">text html ici</a>
-<a href="exo1jsp">la fameuse page JeSaisPas</a>
+<div class="container">
+    <a href="txtBrut">texte brut ici</a>
+    <a href="exo1serv">text html ici</a>
+    <a href="exo1jsp">la fameuse page JeSaisPas</a>
+</div>
+<div class="container">
+    <a href="exo1jsp2">j'ai faim</a>
+
+</div>
+
 </body>
 </html>
