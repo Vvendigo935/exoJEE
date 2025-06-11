@@ -11,12 +11,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@Entity
-@WebServlet(name = "person", value = "/person")
-public class Person extends HttpServlet {
+public class Person {
 
-@Id
-    private int id;
 private String name;
 private String surname;
 private int age;
@@ -28,24 +24,29 @@ private int age;
         this.age = age;
     }
 
-    public Person() {
-
-    }
-private List<Person> persons;
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        getServletContext().getRequestDispatcher("/personJSP.jsp").forward(req, resp);
-
+    public int getAge() {
+        return age;
     }
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age=" + age +
-                '}';
+    public void setAge(int age) {
+        this.age = age;
     }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
 }

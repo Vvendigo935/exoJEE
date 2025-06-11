@@ -9,27 +9,25 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import org.example.exo2jee.entity.Person;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "person", value = "/person")
 public class HelloServlet extends HttpServlet {
-    private String message;
-    private List<String> persons;
+
+    private List<Person> persons;
 
     public void init() {
-        message = "Exo personnes";
-        persons = new ArrayList<String>();
+
         Person person1 = new Person("Sarkozy","Nicolas",70);
+persons.add(person1);
         Person person2 = new Person("truc","bidule",20);
+        persons.add(person2);
         Person person3 = new Person("Mbappé","Kylian",30);
+        persons.add(person3);
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        response.setContentType("text/html");
+
+       request.setAttribute("persons", persons);
         getServletContext().getRequestDispatcher("/personJSP.jsp").forward(request,response);
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
 
     }
 
