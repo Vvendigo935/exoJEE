@@ -1,0 +1,22 @@
+*{
+    text-align: center;
+    background-color: black;
+}
+
+
+h1 {
+    color: aqua;
+    /*animation: mon-animation 3s ease-in-out infinite alternate;*/
+}
+
+
+/*@keyframes mon-animation {*/
+/*    from{*/
+/*        transform: translate(0);*/
+/*        background-color: red;*/
+/*    }*/
+/*    to{*/
+/*        transform: scale(1);*/
+/*        background-color: green;*/
+/*    }*/
+/*}*/

@@ -6,8 +6,17 @@
 
 h1 {
     color: crimson;
-    animation: truc alternate infinite;
+    animation: mon-animation 3s ease-in-out infinite alternate;
 }
-@keyframes truc {
 
+
+@keyframes mon-animation {
+    from{
+        transform: translate(0);
+        background-color: red;
+    }
+    to{
+        transform: scale(6);
+        background-color: green;
+    }
 }
